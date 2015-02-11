@@ -26,6 +26,41 @@ function _clone_array(src, dest){
     }
 }
 
+// push an array in array at the end
+function _push_array(src, dest){
+    //sanity:
+    if(src==undefined )_error("in my_lib.js at _add_child:function (child,obj), src undefined")
+    if(dest==undefined)_error("in my_lib.js at _add_child:function (child,obj), dest undefined")
+    //:sanity
+    _copy_array(src,dest,0,src.length-1,dest.length)   
+}
+
+// check for an item in a group
+function _compare_array(obj, grup){
+    //sanity:
+    if(obj==undefined || obj==""){
+	    _error(" in mylib.js _compare_array(obj, grup ) wrong parameter obj: " +obj)
+    }
+    if(grup==undefined || grup==""){
+	    _error(" in mylib.js _compare_array(obj, grup ) wrong parameter grup: " +grup)
+    }
+    //:sanity
+    var retu=false
+    for(var m=0;m<grup.length;m++){
+	if(obj==grup[m]){
+	    retu=true
+	    break
+	}
+    }	
+    return retu
+}
+
+
+
+
+
+
+
 
 
 
