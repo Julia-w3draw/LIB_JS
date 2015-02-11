@@ -7,14 +7,13 @@ function _error(msg){
    throw new Error(msg);     
 }
 
-
+function _l(msg){
+   if(msg==undefined)msg="undefined";
+	var list=''
+	for(var f=0; f<arguments.length;f++)list+=' '+arguments[f]
+   console.log (list);
+}
 //:DEBUGGING
-
-
-
-
-
-
 
 
 //ARRAYS:
@@ -73,16 +72,6 @@ function _compare_array(obj, grup){
     }	
     return retu
 }
-
-
-
-
-
-
-
-
-
-
 
 
 //:ARRAYS
