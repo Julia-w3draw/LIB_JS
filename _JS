@@ -1,3 +1,22 @@
+//DEBUGGING:
+//program stops with error and error alert
+//exemple:_error("func() in plugin name - wrong parameters: "+parameters[0])
+function _error(msg){
+   alert("Fatal ERROR! "+msg)
+   if(msg=="undefined")msg="undefined error";
+   throw new Error(msg);     
+}
+
+
+//:DEBUGGING
+
+
+
+
+
+
+
+
 //ARRAYS:
 //check if obj is array
 function _is_array(obj){
