@@ -1,1 +1,34 @@
-Functions:
+//ARRAYS:
+//check if obj is array
+function _is_array(obj){
+    var retu=false
+    if(typeof(obj)=="object" && obj.length!=undefined) retu=true
+    return retu
+}
+
+//copy an array to another
+function _clone_array(src, dest){
+    //sanity:
+    if(src==undefined )_error("IN _clone_array(src, dest), src undefined")
+    if(dest==undefined)_error("IN _clone_array(src, dest), dest undefined")
+    //:sanity    
+    if(_is_array(src)){
+	for(var f=0;f<src.length;f++){
+	    if(typeof(src[f])=="object"){
+		dest[f]=[];_clone_array(src[f],dest[f])}
+	    else{
+		dest[f]=src[f]
+	    }
+	}	
+    }else{
+	if(typeof(src)=="object")alert("JS CAN NOT COPY OBJECTS!!!!!")
+	else alert("SOURCE IS NOT ARRAY !!!!!")
+    }
+}
+
+
+
+
+
+
+//:ARRAYS
