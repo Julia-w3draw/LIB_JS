@@ -6,7 +6,7 @@ function _error(msg){
    if(msg=="undefined")msg="undefined error";
    throw new Error(msg);     
 }
-
+//error in console
 function _l(msg){
    if(msg==undefined)msg="undefined";
 	var list=''
